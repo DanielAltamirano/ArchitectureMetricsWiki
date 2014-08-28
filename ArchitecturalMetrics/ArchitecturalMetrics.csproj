@@ -77,7 +77,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
-    <Content Include="Models\Models.js" />
+    <Content Include="Models\Metric.js" />
     <Content Include="packages.config" />
     <Content Include="Content\js\backbone.js" />
     <Content Include="Content\js\backbone.min.js" />
@@ -88,6 +88,7 @@
     <Content Include="Content\js\underscore.js" />
     <Content Include="Content\js\underscore.min.js" />
     <Content Include="Index.html" />
+    <Content Include="Views\MetricView.js" />
     <Content Include="Web.config" />
     <Content Include="Content\js\jquery-2.1.1.min.map" />
     <Content Include="Content\js\underscore.min.map" />
@@ -95,9 +96,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
