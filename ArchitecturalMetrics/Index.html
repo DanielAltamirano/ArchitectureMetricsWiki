@@ -1,61 +1,36 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title></title>
+        <title>Architectural Metrics</title>
     </head>
     <body>
-        
-        <div id="app" class="panel panel-default" style="width: 300px;">
-        </div>
-
-        <script id="metricElement" type="text/template">
-            <%= MetricName %>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= Percentage %>%;">
-                    <span class="sr-only"><%= Percentage %>% Complete</span>
-                </div>
-            </div>
-        </script>
-
+        <link href="Content/css/bootstrap.css" rel="stylesheet"/>
+        <link href="Content/css/sb-admin-2.css" rel="stylesheet"/>
         <script src="Content/js/jquery-2.1.1.min.js"></script>
         <script src="Content/js/underscore.min.js"></script>
         <script src="Content/js/backbone.min.js"></script>
         <script src="Content/js/bootstrap.js"></script>
-        <link href="Content/css/bootstrap.css" rel="stylesheet">
+        <div class="col-lg-12 ">
+                <h1 class="page-header">Architectural Metrics</h1>
+            </div>
+        <div id="app" class="page-wrapper">
+        </div>
+
+        <script id="metricElement" type="text/template">
+            <div class="panel-heading">
+                <%= MetricName %>
+            </div>
+            <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+            </div>
+            <div class="panel-footer" style="height: 41px;">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= Percentage %>%;"><%= Percentage %>%</div>
+                </div>
+            </div>
+        </script>
+
         <script src="Models/Metric.js"></script>
         <script src="Views/MetricView.js"></script>
-
-        <!--<script src="Content/js/jquery-2.1.1.min.js"></script>
-            <script src="Content/js/underscore.min.js"></script>
-            <script src="Content/js/backbone.min.js"></script>
-            <script src="Models/Models.js"></script>
-            <script type="text/javascript">
-
-            //Define View
-            var EmpView = Backbone.View.extend({
-                //The HTML Element
-                el: 'body',
-                //Render View
-                render: function () {
-                    var viewHtml = '<table>';
-                    viewHtml += "<tr><td>EmpNo</td><td>EmpName</td><td>DeptName</td><td>Designation</td> <td>Salary</td></tr>";
-                    //Iterate through the collection
-                    _.each(this.collection.models, function (m, i, l) {
-                        var empRecHtml = '<tr><td>' + m.get('EmpNo') + '</td><td>' + m.get('EmpName') + '</td><td>' + m.get('DeptName') + '</td><td>' + m.get('Designation') + '</td><td>' + m.get('Salary') + '</td></tr>';
-                        viewHtml += empRecHtml;
-                    });
-                    viewHtml += '</table>';
-                    //Set the View
-                    $(this.el).html(viewHtml);
-                }
-            });
-
-            //The View Instance and Passing Collection to it
-            var eView = new EmpView({
-                collection: Employees
-            });
-            //Render the View
-            eView.render();
-        </script>-->
     </body>
 </html>
